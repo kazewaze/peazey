@@ -9,9 +9,7 @@ export default function links(linksArray) {
     return (
       <li key={item + "Key"}>
         <Link href={"/" + item.toLowerCase()}>
-          <a>
-            {item}
-          </a>
+          {item}
         </Link>
       </li>
     );

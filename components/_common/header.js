@@ -44,13 +44,21 @@ export default function Header({ loggedIn }) {
         <nav className={styles.nav}>
           <div className={styles.imgWrapper}>
             <Link href="/">
-              <Image height={"50px"} width={"150px"} className={styles.logo} src="/peazey.svg" alt="Peazey"/>
+              <Image height={"45px"} width={"145px"} className={styles.logo} src="/peazey.svg" alt="Peazey"/>
             </Link>
           </div>
           <hr className={styles.hLine}/>
           <ul className={styles.links}>
             { links }
-            { loggedIn ? <Link href="/api/auth/logout">Logout</Link> : <Link href="/api/auth/login">Login</Link> }
+            { loggedIn ? (
+              <li key={"LogoutKey"}>
+                <Link href="/api/auth/logout">Logout</Link>
+              </li>
+              ) : (
+                <li key={"LoginKey"}>
+                  <Link href="/api/auth/login">Login</Link>
+                </li>
+              )}
           </ul>
           <MenuButton />
           <MobileMenu loggedIn />
