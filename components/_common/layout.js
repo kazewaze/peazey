@@ -10,12 +10,13 @@ import Footer from './footer'
 import styles from '../styles/layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
 
-export const siteTitle = 'Peazey'
+const siteTitle = 'Peazey'
 
 export default function Layout({ children, loggedIn }) {
   return (
     <>
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta
           name="author"

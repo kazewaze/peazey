@@ -44,9 +44,7 @@ export default function Header({ loggedIn }) {
         <nav className={styles.nav}>
           <div className={styles.imgWrapper}>
             <Link href="/">
-              <a>
-                <Image height={"50px"} width={"150px"} className={styles.logo} src="/peazey.svg" alt="Peazey"/>
-              </a>
+              <Image height={"35px"} width={"135px"} className={styles.logo} src="/peazey.svg" alt="Peazey"/>
             </Link>
           </div>
           <hr className={styles.hLine}/>
