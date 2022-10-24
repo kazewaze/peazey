@@ -4,6 +4,8 @@
 import { useUser } from '@auth0/nextjs-auth0'
 
 import Layout from '../components/_common/layout'
+import Home from '../components/home'
+import LoggedInHome from '../components/loggedInHome'
 
 export default () => {
 //  const router = useRouter();
@@ -16,11 +18,15 @@ export default () => {
 
   if (user) {
     return (
-      <Layout user loggedIn />
+      <Layout loggedIn>
+        <LoggedInHome user={user} />
+      </Layout>
     );
   }
 
       return (
-        <Layout />
+        <Layout>
+          <Home />
+        </Layout>
       );
 };

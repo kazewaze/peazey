@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <h5>
         <Link href="/">
-          <Image height={"25px"} width={"125px"} className={styles.logo} src="/peazey_black.svg" alt="Peazey"/>
+          <Image height={"35px"} width={"135px"} className={styles.logo} src="/peazey_black.svg" alt="Peazey"/>
         </Link>
       </h5>
       <p>Copyright © 2022 Kaycee Ingram</p>

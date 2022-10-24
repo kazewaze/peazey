@@ -2,8 +2,6 @@ import Head from 'next/head'
 // import Link from 'next/link'
 // import Image from 'next/image'
 
-import Home from '../home'
-import LoggedInHome from '../loggedInHome'
 import Navbar from './header'
 import Footer from './footer'
 
@@ -41,9 +39,9 @@ export default function Layout({ children, user, loggedIn }) {
               <>
                 <Navbar loggedIn />
                   <div className={ styles.container }>
-                    <div className={ utilStyles.introContainer }>
-                      <LoggedInHome user />
-                    </div>
+                    {/* <div className={ utilStyles.introContainer }>
+                      
+                    </div> */}
                   <main>{ children }</main>
                 </div>
               </>
@@ -57,9 +55,8 @@ export default function Layout({ children, user, loggedIn }) {
             <>
               <Navbar />
                 <div className={ styles.container }>
-                  <div className={ utilStyles.introContainer }>
-                    <Home />
-                  </div>
+                  {/* <div className={ utilStyles.introContainer }>
+                  </div> */}
                 <main>{ children }</main>
               </div>
             </>
