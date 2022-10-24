@@ -35,27 +35,35 @@ export default function Layout({ children, loggedIn }) {
         <meta property="og:site_name" content="Peazey" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Navbar />
-      <div className={ styles.container }>
-        <div className={ utilStyles.introContainer }>
           {
             loggedIn ? (
               <>
-                <LoggedInHome />
+                <Navbar loggedIn />
+                  <div className={ styles.container }>
+                    <div className={ utilStyles.introContainer }>
+                      <LoggedInHome />
+                    </div>
+                  <main>{ children }</main>
+                </div>
               </>
             ) : (
               <>
               </>
             )
           }
-        </div>
-        <main>{ children }</main>
         {
           !loggedIn && (
-            <Home />
+            <>
+              <Navbar />
+                <div className={ styles.container }>
+                  <div className={ utilStyles.introContainer }>
+                    <Home />
+                  </div>
+                <main>{ children }</main>
+              </div>
+            </>
           )
         }
-      </div>
       <Footer/>
     </>
   )

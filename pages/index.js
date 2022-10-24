@@ -1,9 +1,9 @@
 // import { useRouter } from 'next/router'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import { useUser } from '@auth0/nextjs-auth0'
 
-// import Layout from '../components/_common/layout'
+import Layout from '../components/_common/layout'
 
 export default () => {
 //  const router = useRouter();
@@ -16,19 +16,15 @@ export default () => {
 
   if (user) {
     return (
-      // <Layout loggedIn>
-      //   Logged In User Stuff...
-      // </Layout>
-      <div>
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <Link href="/api/auth/logout">Logout</Link>;
-      </div>
+      <Layout loggedIn>
+        <h1>Logged In</h1>
+      </Layout>
     );
   }
 
-      // <Layout>
-      //   Regular Home page stuff before logging in...
-      // </Layout>
-      return <Link href="/api/auth/login">Login</Link>;
+      return (
+        <Layout>
+          <h1>Logged Out</h1>
+        </Layout>
+      );
 };

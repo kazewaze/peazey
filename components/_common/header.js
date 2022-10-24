@@ -2,10 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from '../styles/header.module.css';
-import classes from '../../lib/classes';
-import generateLinks from '../../lib/links';
+import classes from '../../helpers/classes';
+import generateLinks from '../../helpers/links';
 
-const links = generateLinks(['Projects', 'Skills', 'Posts', 'About', 'Contact']);
+const links = generateLinks(['About', 'Contact']);
 
 function MenuButton() {
   return (
@@ -20,40 +20,42 @@ function MenuButton() {
   )
 }
 
-function MobileMenu() {
+function MobileMenu({ loggedIn }) {
   return (
     <div id={styles.mobileMenu}>
       <ul className={styles.mobileMenuInner}>
         <li className={styles.menuLogo}>
           <Link href="/">
             <a>
-              <strong>kazewaze</strong>
+              <strong>Peazey</strong>
             </a>
           </Link>
         </li>
         { links }
+        {loggedIn ? <Link href="/api/auth/logout">Logout</Link> : <Link href="/api/auth/login">Login</Link> }
       </ul>
     </div>
   )
 }
 
-export default function Header() {
+export default function Header({ loggedIn }) {
   return (
       <header className={styles.header}>
         <nav className={styles.nav}>
           <div className={styles.imgWrapper}>
             <Link href="/">
               <a>
-                <Image height={"45px"} width={"45px"} className={styles.logo} src="/images/kazewaze.svg" alt="kazewaze logo"/>
+                <Image height={"45px"} width={"45px"} className={styles.logo} src="/peazey.svg" alt="peazey logo"/>
               </a>
             </Link>
           </div>
           <hr className={styles.hLine}/>
           <ul className={styles.links}>
             { links }
+            { loggedIn ? <Link href="/api/auth/logout">Logout</Link> : <Link href="/api/auth/login">Login</Link> }
           </ul>
           <MenuButton />
-          <MobileMenu />
+          <MobileMenu loggedIn />
         </nav>
       </header>
   )
