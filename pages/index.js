@@ -1,6 +1,10 @@
-import { useUser } from "@auth0/nextjs-auth0";
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+
+import { useUser } from '@auth0/nextjs-auth0'
 
 export default () => {
+  const router = useRouter();
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
@@ -16,5 +20,5 @@ export default () => {
       </div>
     );
   }
-  return <a href="/api/auth/login">Login</a>;
+  return <Link href="/api/auth/login">Login</Link>;
 };
