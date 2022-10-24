@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 1rem 0;
+  border-top: 1.75px solid #e7e8e9;
+  background-color: #f7f8f9;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: none;
+}
+
+.footer a:hover {
+  background: transparent;
+}
+
+.footer p {
+  text-align: center;
+  color: #7f8f9f;
+}
