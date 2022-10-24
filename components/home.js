@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-    <div>
-      <h1>Not Logged In Home Page</h1>
+    <div style={{textAlign: 'center'}}>
+      <h1>Not Logged In</h1>
     </div>
   )
 }

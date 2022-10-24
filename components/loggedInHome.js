@@ -2,8 +2,8 @@
 
 export default function LoggedInHome() {
   return (
-    <div>
-      <h1>Logged In Home Page</h1>
+    <div style={{textAlign: 'center'}}>
+      <h1>Logged In</h1>
     </div>
   )
 }

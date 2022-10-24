@@ -16,15 +16,11 @@ export default () => {
 
   if (user) {
     return (
-      <Layout loggedIn>
-        <h1>Logged In</h1>
-      </Layout>
+      <Layout loggedIn />
     );
   }
 
       return (
-        <Layout>
-          <h1>Logged Out</h1>
-        </Layout>
+        <Layout />
       );
 };

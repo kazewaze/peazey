@@ -45,7 +45,7 @@ export default function Header({ loggedIn }) {
           <div className={styles.imgWrapper}>
             <Link href="/">
               <a>
-                <Image height={"45px"} width={"45px"} className={styles.logo} src="/peazey.svg" alt="peazey logo"/>
+                <Image height={"50px"} width={"150px"} className={styles.logo} src="/peazey.svg" alt="Peazey"/>
               </a>
             </Link>
           </div>
