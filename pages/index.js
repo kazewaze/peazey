@@ -16,7 +16,7 @@ export default () => {
 
   if (user) {
     return (
-      <Layout loggedIn />
+      <Layout user loggedIn />
     );
   }
 

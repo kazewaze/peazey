@@ -12,7 +12,7 @@ import utilStyles from '../../styles/utils.module.css'
 
 const siteTitle = 'Peazey'
 
-export default function Layout({ children, loggedIn }) {
+export default function Layout({ children, user, loggedIn }) {
   return (
     <>
       <Head>
@@ -42,7 +42,7 @@ export default function Layout({ children, loggedIn }) {
                 <Navbar loggedIn />
                   <div className={ styles.container }>
                     <div className={ utilStyles.introContainer }>
-                      <LoggedInHome />
+                      <LoggedInHome user />
                     </div>
                   <main>{ children }</main>
                 </div>
