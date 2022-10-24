@@ -1,13 +1,13 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import { useUser } from '@auth0/nextjs-auth0'
 
 export default () => {
-  const router = useRouter();
+//  const router = useRouter();
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
+  // if (isLoading) return <div>Loading...</div>;
 
   if (error) return <div>{error.message}</div>;
 
@@ -16,7 +16,7 @@ export default () => {
       <div>
         <h2>{user.name}</h2>
         <p>{user.email}</p>
-        <a href="/api/auth/logout">Logout</a>
+        <Link href="/api/auth/logout">Login</Link>;
       </div>
     );
   }
