@@ -32,7 +32,15 @@ function MobileMenu({ loggedIn }) {
           </Link>
         </li>
         { links }
-        {loggedIn ? <Link href="/api/auth/logout">Logout</Link> : <Link href="/api/auth/login">Login</Link> }
+        { loggedIn ? (
+              <li key={"LogoutKey"}>
+                <Link href="/api/auth/logout">Logout</Link>
+              </li>
+              ) : (
+                <li key={"LoginKey"}>
+                  <Link href="/api/auth/login">Login</Link>
+                </li>
+              )}
       </ul>
     </div>
   )
