@@ -5,7 +5,7 @@ import styles from '../styles/header.module.css';
 import classes from '../../helpers/classes';
 import generateLinks from '../../helpers/links';
 
-const links = generateLinks(['About', 'Contact']);
+const links = generateLinks(['Explore']);
 
 function MenuButton() {
   return (
@@ -24,23 +24,19 @@ function MobileMenu({ loggedIn }) {
   return (
     <div id={styles.mobileMenu}>
       <ul className={styles.mobileMenuInner}>
-        <li className={styles.menuLogo}>
-          <Link href="/">
-            <a>
-              <strong>Peazey</strong>
-            </a>
-          </Link>
-        </li>
         { links }
         { loggedIn ? (
               <li key={"LogoutKey"}>
-                <Link href="/api/auth/logout">Logout</Link>
+                <Link href="/api/auth/logout">Sign out</Link>
               </li>
               ) : (
                 <li key={"LoginKey"}>
-                  <Link href="/api/auth/login">Login</Link>
+                  <Link href="/api/auth/login">Sign In</Link>
                 </li>
-              )}
+              )}  
+              <li classname={styles.buildSomethingBtn} key={"buildAndShare"}>
+                <Link href="/api/auth/login">Build Something</Link>
+              </li>
       </ul>
     </div>
   )
@@ -60,11 +56,11 @@ export default function Header({ loggedIn }) {
             { links }
             { loggedIn ? (
               <li key={"LogoutKey"}>
-                <Link href="/api/auth/logout">Logout</Link>
+                <Link href="/api/auth/logout">Sign out</Link>
               </li>
               ) : (
                 <li key={"LoginKey"}>
-                  <Link href="/api/auth/login">Login</Link>
+                  <Link href="/api/auth/login">Sign In</Link>
                 </li>
               )}
           </ul>

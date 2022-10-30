@@ -21,6 +21,14 @@
   color: #fff;
 }
 
+.buildSomethingBtn {
+  padding: 15px;
+  border: none;
+  font-weight: bold;
+  color: #030303;
+  background-color: #ffcc00;
+}
+
 .imgWrapper > a {
   display: flex;
   justify-content: center;
