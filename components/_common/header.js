@@ -69,7 +69,7 @@ export default function Header({ loggedIn }) {
               )}
           </ul>
           <MenuButton />
-          <MobileMenu loggedIn />
+          <MobileMenu loggedIn={loggedIn} />
         </nav>
       </header>
   )
