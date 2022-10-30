@@ -25,3 +25,17 @@
   text-align: center;
   color: #7f8f9f;
 }
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLinks a {
+  color: #030303;
+}
+
+.footerLinks a:hover {
+  color: #030303;
+}

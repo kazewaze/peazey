@@ -11,7 +11,7 @@ export default function Footer() {
           <Image height={"35px"} width={"135px"} className={styles.logo} src="/peazey_black.svg" alt="Peazey"/>
         </Link>
       </h5>
-      <ul>
+      <ul className={styles.footerLinks}>
         <li key={"AboutKey"}>
           <Link href="/about">
             About

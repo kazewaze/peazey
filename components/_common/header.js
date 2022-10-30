@@ -34,7 +34,7 @@ function MobileMenu({ loggedIn }) {
                   <Link href="/api/auth/login">Sign In</Link>
                 </li>
               )}  
-              <li classname={styles.buildSomethingBtn} key={"buildAndShare"}>
+              <li className={styles.buildSomethingBtn} key={"buildAndShare"}>
                 <Link href="/api/auth/login">Build Something</Link>
               </li>
       </ul>
@@ -63,6 +63,9 @@ export default function Header({ loggedIn }) {
                   <Link href="/api/auth/login">Sign In</Link>
                 </li>
               )}
+              <li className={styles.buildSomethingBtn} key={"buildAndShare"}>
+                <Link href="/api/auth/login">Build Something</Link>
+              </li>
           </ul>
           <MenuButton />
           <MobileMenu loggedIn={loggedIn} />
