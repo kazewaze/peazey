@@ -21,7 +21,7 @@
   color: #fff;
 }
 
-.buildSomethingBtn {
+.buildSomethingBtn a {
   padding: 15px;
   border: none;
   font-weight: bold;
